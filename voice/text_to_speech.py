@@ -1,5 +1,5 @@
 """
-voice/text_to_speech.py – Mantra AI v3.0
+voice/text_to_speech.py – Mantra AI v3.2
 ─────────────────────────────────────────
 Human-sounding **English** TTS using Microsoft Edge neural voices (edge-tts)
 with in-process MP3 playback via pygame. Falls back to offline pyttsx3 (SAPI5)
@@ -14,7 +14,7 @@ Why edge-tts:
   same neural voices used by Microsoft Edge's "Read Aloud" — natural prosody,
   free, no API key — it just needs internet (the app already needs it for STT).
 
-English-only (v3.0):
+English-only (v3.2):
   - `tts.english_only` strips non-Latin script (e.g. Devanagari) and emoji, so
     a stray Hindi word from an LLM can never garble the English voice.
   - Long replies are split into sentence chunks; the next chunk is synthesized

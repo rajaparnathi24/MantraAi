@@ -1,5 +1,5 @@
 """
-brain/brain.py – Mantra AI v3.0
+brain/brain.py – Mantra AI v3.2
 ────────────────────────────────
 The LLM Router — Mantra's decision-maker for which AI to talk to.
 

@@ -1,5 +1,5 @@
 """
-voice/speech_to_text.py – Mantra AI v3.0
+voice/speech_to_text.py – Mantra AI v3.2
 ──────────────────────────────────────────
 Microphone capture and **English** speech recognition using Google's free STT.
 
@@ -14,7 +14,7 @@ v2.0 Audio Improvements:
   - Audio volume normalization before sending to Google STT
   - Noise suppression via ambient calibration
 
-v3.0 Latency / Efficiency Improvements:
+v3.2 Latency / Efficiency Improvements:
   - English-only recognition locale (stt.language, default 'en-IN' — Google's
     Indian-English model, the most accurate for Indian-accented English)
   - Persistent mic stream across a session: open_stream() / close_stream()
@@ -78,7 +78,7 @@ def _normalize_audio(audio: sr.AudioData, target_rms: int = 3000) -> sr.AudioDat
 
 class SpeechToText:
     """
-    v3.0 SpeechToText — English-only recognition with a reusable mic stream.
+    v3.2 SpeechToText — English-only recognition with a reusable mic stream.
 
     Key settings (all tunable via config.json → stt section):
       - language              : 'en-IN' (English). Use 'en-US' / 'en-GB' if preferred.

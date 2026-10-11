@@ -1,5 +1,5 @@
 """
-voice/wake_word.py – Mantra AI v3.0
+voice/wake_word.py – Mantra AI v3.2
 ─────────────────────────────────────
 Background thread that continuously listens for the English wake word
 "Hello Mantra". Signals the main assistant loop via a threading.Event.
@@ -8,7 +8,7 @@ Location : voice/wake_word.py
 Talks to  : config.py (WAKE_* / STT settings), utils.py (logging)
 Used by   : main.py
 
-v3.0 Efficiency Improvements:
+v3.2 Efficiency Improvements:
   - Local pre-gate: clips that are too short or too quiet are discarded here
     instead of being uploaded to Google STT. Most background noise never
     leaves the machine, so detection is faster and uses far less bandwidth.

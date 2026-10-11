@@ -850,11 +850,10 @@ export default function Home() {
                 background: isLoading
                   ? "rgba(250,204,21,0.06)"
                   : "rgba(74, 222, 128, 0.06)",
-                border: `1px solid ${
-                  isLoading
+                border: `1px solid ${isLoading
                     ? "rgba(250,204,21,0.2)"
                     : "rgba(74, 222, 128, 0.2)"
-                }`,
+                  }`,
                 borderRadius: 14,
                 cursor: isLoading ? "wait" : "pointer",
                 letterSpacing: "0.12em",
@@ -979,7 +978,7 @@ export default function Home() {
             transition: "opacity 0.8s 0.6s ease",
           }}
         >
-          MantraAI v3.0 — Starter Engine
+          MantraAI v3.2 — Starter Engine
         </p>
       </main>
 

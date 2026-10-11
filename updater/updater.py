@@ -1,5 +1,5 @@
 """
-updater/updater.py – Mantra AI v3.0
+updater/updater.py – Mantra AI v3.2
 ─────────────────────────────────────
 Controlled self-update system for Mantra AI.
 
@@ -61,7 +61,7 @@ class Updater:
         updater = Updater()
         status = updater.check_for_update()
         print(status)
-        # → "New version 3.1.0 is available! Current: 3.0.0. Say 'update' to upgrade."
+        # → "New version 3.1.0 is available! Current: 3.2.0. Say 'update' to upgrade."
     """
 
     # Where Mantra's files live (the project root)
@@ -85,7 +85,7 @@ class Updater:
             "https://api.github.com/repos/YourUsername/MantraAI"
         )
         # Current version from config
-        self._current_version = getattr(config, "VERSION", "3.0.0")
+        self._current_version = getattr(config, "VERSION", "3.2.0")
 
         log.info(
             f"Updater ready. Current version: {self._current_version} | "
@@ -105,7 +105,7 @@ class Updater:
         Returns:
             A human-readable string describing the update status.
             Examples:
-              "Mantra is up to date. You have version 3.0.0."
+              "Mantra is up to date. You have version 3.2.0."
               "New version 3.1.0 is available! Say 'update Mantra' to upgrade."
               "I couldn't check for updates. Please check your internet connection."
         """

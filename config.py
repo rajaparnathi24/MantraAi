@@ -51,7 +51,7 @@ VERSION        : str = _cfg["assistant"]["version"]          # "2.0"
 TIMEZONE       : str = _cfg["assistant"].get("timezone", "Asia/Kolkata")  # IST default
 
 # ── TTS ───────────────────────────────────────────────────────────────────────
-# v3.0: primary engine is edge-tts (neural, human-sounding). rate/pitch are
+# v3.2: primary engine is edge-tts (neural, human-sounding). rate/pitch are
 # edge-tts relative offsets: rate is a percent (e.g. 0 → "+0%", -10 → "-10%"),
 # pitch is in Hz (e.g. 0 → "+0Hz"). volume (0.0–1.0) is applied at playback.
 TTS_ENGINE       : str   = _cfg["tts"].get("engine", "edge-tts")
@@ -109,7 +109,7 @@ _wake = _cfg.get("wake", {})
 WAKE_LISTEN_TIMEOUT   : float = float(_wake.get("listen_timeout", 1.5))
 """Seconds the wake listener waits for speech before looping (keeps pause snappy)."""
 
-WAKE_PHRASE_LIMIT     : float = float(_wake.get("phrase_time_limit", 3.0))
+WAKE_PHRASE_LIMIT     : float = float(_wake.get("phrase_time_limit", 3.2))
 """Max seconds recorded per wake-word attempt. The wake phrase is short."""
 
 WAKE_MIN_SPEECH_SECS  : float = float(_wake.get("min_speech_seconds", 0.35))
@@ -169,7 +169,7 @@ BOOKMARKS : dict = _v2.get("bookmarks", {})
 _persona = _cfg.get("persona", {})
 
 PERSONA_LANGUAGE    : str = _persona.get("default_language", "english")
-"""Response language. Mantra v3.0 is English-only."""
+"""Response language. Mantra v3.2 is English-only."""
 
 PERSONA_MAX_HISTORY : int = int(_persona.get("max_history_turns", 10))
 """Max conversation turns kept in memory for Gemini context."""
@@ -185,7 +185,7 @@ PERSONA_SYSTEM_PROMPT : str = _persona.get(
 )
 """Full system prompt sent to Gemini API as personality context."""
 
-# ── v3.0: Local LLM (Ollama) ──────────────────────────────────────────────────
+# ── v3.2: Local LLM (Ollama) ──────────────────────────────────────────────────
 _v3 = _cfg.get("v3", {})
 
 LOCAL_LLM_URL   : str = _v3.get("local_llm_url", "http://localhost:11434")
@@ -200,11 +200,11 @@ AI_PROVIDER : str = _v3.get("ai_provider", "auto")
 OPENAI_MODEL : str = _v3.get("openai_model", "gpt-4o-mini")
 """Which OpenAI model to use (e.g. 'gpt-4o-mini', 'gpt-4o', 'gpt-3.5-turbo')."""
 
-# ── v3.0: Memory ──────────────────────────────────────────────────────────────
+# ── v3.2: Memory ──────────────────────────────────────────────────────────────
 MEMORY_FILE : str = _v3.get("memory_file", str(DATA_DIR / "memory.json"))
 """Path to the JSON file used by memory/memory.py to store persistent facts."""
 
-# ── v3.0: Updater ─────────────────────────────────────────────────────────────
+# ── v3.2: Updater ─────────────────────────────────────────────────────────────
 UPDATER_REPO : str = _v3.get(
     "updater_repo",
     "https://api.github.com/repos/YourUsername/MantraAI"

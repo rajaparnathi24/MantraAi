@@ -1,5 +1,5 @@
 """
-voice/speaker_verify.py – Mantra AI v3.0
+voice/speaker_verify.py – Mantra AI v3.2
 ──────────────────────────────────────────
 Speaker verification — confirms that only YOUR voice can activate Mantra.
 

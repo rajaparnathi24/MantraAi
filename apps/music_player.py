@@ -1,5 +1,5 @@
 """
-apps/music_player.py – Mantra AI v3.0
+apps/music_player.py – Mantra AI v3.2
 ──────────────────────────────────────
 Local music player module to play, browse, and stop local audio files.
 

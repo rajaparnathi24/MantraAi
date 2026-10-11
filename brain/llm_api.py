@@ -1,5 +1,5 @@
 """
-brain/llm_api.py – Mantra AI v3.0
+brain/llm_api.py – Mantra AI v3.2
 ──────────────────────────────────
 Communicates with the Gemini API (online LLM).
 

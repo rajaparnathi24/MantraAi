@@ -1,5 +1,5 @@
 """
-agent/agent.py – Mantra AI v3.0
+agent/agent.py – Mantra AI v3.2
 ──────────────────────────────────
 The Agent — Mantra's brain-to-action orchestrator.
 
@@ -9,7 +9,7 @@ What it does:
   3. If no tool matches → asks the Brain (LLM) for a conversational reply
   4. Returns the response text to the caller
 
-This is the v3.0 evolution of assistant.py.
+This is the v3.2 evolution of assistant.py.
 It is cleaner because:
   - Tools are managed by ToolRegistry (not scattered through assistant.py)
   - LLM calls go through brain/brain.py (not directly to Gemini API)
@@ -35,7 +35,7 @@ from pathlib import Path
 import config
 from utils import log, normalize, contains_any, get_time, get_date, get_greeting_period
 
-# v3.0 modules
+# v3.2 modules
 from brain.brain   import Brain         # LLM router (Gemini + local LLM)
 from agent.tools   import ToolRegistry  # all action tools
 from memory.memory import Memory        # persistent memory
@@ -91,7 +91,7 @@ _SESSION_OPENERS = [
 
 class Agent:
     """
-    v3.0 Agent — Mantra's command router and session manager.
+    v3.2 Agent — Mantra's command router and session manager.
 
     Call `run_session()` after the wake word is detected.
     It loops until the user says goodbye.
@@ -107,7 +107,7 @@ class Agent:
         self.stt   = stt
         self._lock = threading.Lock()
 
-        # v3.0: Brain (LLM router) and Tool registry
+        # v3.2: Brain (LLM router) and Tool registry
         self.brain = Brain()
         self.tools = ToolRegistry()
 
@@ -123,7 +123,7 @@ class Agent:
             self.retriever = None
             log.warning(f"Agent: RAG Retriever unavailable: {e}")
 
-        log.info("Agent v3.0 initialised. Brain and ToolRegistry ready.")
+        log.info("Agent v3.2 initialised. Brain and ToolRegistry ready.")
 
     # ── Public ─────────────────────────────────────────────────────────────────
 

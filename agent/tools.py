@@ -1,5 +1,5 @@
 """
-agent/tools.py – Mantra AI v3.0
+agent/tools.py – Mantra AI v3.2
 ──────────────────────────────────
 The Tool Registry — all of Mantra's abilities in one place.
 
@@ -32,7 +32,7 @@ from browser       import Browser
 from automation    import Automation
 from file_manager  import FileManager
 
-# v3.0 new modules in their proper subfolders
+# v3.2 new modules in their proper subfolders
 from apps.open_app           import AppLauncher
 from apps.music_player       import MusicPlayer
 from system.system_control   import SystemControl
@@ -80,8 +80,8 @@ class ToolRegistry:
           3.  Screen          — screenshot, screen recording
           4.  Clipboard       — copy, paste, read clipboard
           5.  System Control  — volume, brightness, shutdown, lock
-          6.  Music Player    — play, stop, next/previous, list local songs (v3.0)
-          7.  App Launcher    — open/close Windows apps (v3.0)
+          6.  Music Player    — play, stop, next/previous, list local songs (v3.2)
+          7.  App Launcher    — open/close Windows apps (v3.2)
           8.  File Manager    — find, create, delete, rename files
           9.  Browser         — open URLs, search Google/YouTube
           10. Automation      — desktop automation, window management
@@ -124,12 +124,12 @@ class ToolRegistry:
         if response:
             return response
 
-        # ── 6. Music Player (v3.0) ─────────────────────────────────────────────
+        # ── 6. Music Player (v3.2) ─────────────────────────────────────────────
         response = self.music_player.parse_and_execute(text)
         if response:
             return response
 
-        # ── 7. App Launcher (v3.0) ─────────────────────────────────────────────
+        # ── 7. App Launcher (v3.2) ─────────────────────────────────────────────
         response = self._try_app_launch(text)
         if response:
             return response

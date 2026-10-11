@@ -1,5 +1,5 @@
 """
-apps/open_app.py – Mantra AI v3.0
+apps/open_app.py – Mantra AI v3.2
 ───────────────────────────────────
 Clean, focused Windows app launcher.
 

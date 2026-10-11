@@ -1,5 +1,5 @@
 """
-memory/memory.py – Mantra AI v3.0
+memory/memory.py – Mantra AI v3.2
 ───────────────────────────────────
 Mantra's persistent memory — stores and retrieves facts across sessions.
 

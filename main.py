@@ -1,5 +1,5 @@
 """
-main.py – Mantra AI v3.0
+main.py – Mantra AI v3.2
 ──────────────────────────
 Entry point. Starts the wake word detector and the agent session loop.
 
@@ -21,12 +21,12 @@ import signal
 import config
 from utils import setup_logger, log
 
-# v3.0: All voice components now live in the voice/ package
+# v3.2: All voice components now live in the voice/ package
 from voice.text_to_speech import TextToSpeech
 from voice.speech_to_text import SpeechToText
 from voice.wake_word      import WakeWordDetector
 
-# v3.0: The agent now lives in agent/agent.py
+# v3.2: The agent now lives in agent/agent.py
 from agent.agent import Agent
 
 
@@ -51,7 +51,7 @@ def main():
     log = setup_logger("MantraAI.main")
 
     print("=" * 60)
-    print(f"  {config.ASSISTANT_NAME} – Version {config.VERSION}  (v3.0 Clean Architecture)")
+    print(f"  {config.ASSISTANT_NAME} – Version {config.VERSION}  (v3.2 Clean Architecture)")
     print("  Starting up...")
     print("=" * 60)
 
@@ -73,7 +73,7 @@ def main():
     )
     wake_detector.start()
 
-    # Create the v3.0 agent (replaces assistant.py)
+    # Create the v3.2 agent (replaces assistant.py)
     agent = Agent(tts=tts, stt=stt)
 
     # Cache the stock phrases in the background so they play instantly later.
@@ -113,7 +113,7 @@ def main():
     # ── Cleanup ────────────────────────────────────────────────────────────────
     wake_detector.stop()
     tts.speak(f"Goodbye! {config.ASSISTANT_NAME} is shutting down.")
-    log.info("MantraAI v3.0 shutdown complete.")
+    log.info("MantraAI v3.2 shutdown complete.")
     sys.exit(0)
 
 

@@ -1,5 +1,5 @@
 """
-brain/local_llm.py – Mantra AI v3.0
+brain/local_llm.py – Mantra AI v3.2
 ────────────────────────────────────
 Communicates with a locally running LLM via Ollama.
 

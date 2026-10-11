@@ -617,7 +617,7 @@ python diagnose.py
 | `psutil` | `>=6.1.1` | Process management and monitoring |
 | `pygetwindow` | `>=0.0.9` | Window management (minimize, maximize, focus) |
 | `pycaw` | `>=20240210` | Windows Core Audio volume control |
-| `screen-brightness-control` | `>=0.23.0` | Display brightness adjustment |
+| `screen-brightness-control` | `>=0.23.2` | Display brightness adjustment |
 | `mss` | `>=9.0.2` | Ultra-fast screen grabbing |
 | `opencv-python` | `>=4.10.0` | Video processing and MP4 recording |
 | `Pillow` | `>=11.0.0` | Image manipulation and screenshot export |

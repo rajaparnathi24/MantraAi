@@ -1,5 +1,5 @@
 """
-system/system_control.py – Mantra AI v3.0
+system/system_control.py – Mantra AI v3.2
 ──────────────────────────────────────────
 PC power management, audio volume, and screen brightness control.
 
@@ -8,7 +8,7 @@ Talks to  : config.py, utils.py
 Used by   : agent/agent.py (via agent/tools.py)
 
 This file is a clean copy of the root-level system_control.py,
-moved to the system/ package as part of the v3.0 architecture refactor.
+moved to the system/ package as part of the v3.2 architecture refactor.
 
 v2.0 operations preserved:
   - shutdown, restart, lock, sleep, cancel_shutdown
