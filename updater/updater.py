@@ -42,7 +42,7 @@ from utils import log
 
 def _version_tuple(version_str: str) -> tuple[int, ...]:
     """
-    Convert a version string like '3.1.0' into a comparable tuple (3, 1, 0).
+    Convert a version string like '3.2.0' into a comparable tuple (3, 1, 0).
     This lets us compare versions: (3, 1, 0) > (2, 0, 0) → True
     """
     try:
@@ -61,7 +61,7 @@ class Updater:
         updater = Updater()
         status = updater.check_for_update()
         print(status)
-        # → "New version 3.1.0 is available! Current: 3.2.0. Say 'update' to upgrade."
+        # → "New version 3.2.0 is available! Current: 3.2.0. Say 'update' to upgrade."
     """
 
     # Where Mantra's files live (the project root)
@@ -106,7 +106,7 @@ class Updater:
             A human-readable string describing the update status.
             Examples:
               "Mantra is up to date. You have version 3.2.0."
-              "New version 3.1.0 is available! Say 'update Mantra' to upgrade."
+              "New version 3.2.0 is available! Say 'update Mantra' to upgrade."
               "I couldn't check for updates. Please check your internet connection."
         """
         log.info("Updater: Checking for updates...")

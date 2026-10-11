@@ -1,14 +1,14 @@
-# 🎙️ Mantra AI v3.1 — Intelligent Voice & Desktop Automation Agent
+# 🎙️ Mantra AI v3.2 — Intelligent Voice & Desktop Automation Agent
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-3.1_Multi--Provider-blue.svg?style=for-the-badge" alt="Version 3.1" />
-  <img src="https://img.shields.io/badge/Python-3.10%20–%203.14-brightgreen.svg?style=for-the-badge" alt="Python Version" />
+  <img src="https://img.shields.io/badge/Version-3.2_Multi--Provider-blue.svg?style=for-the-badge" alt="Version 3.2" />
+  <img src="https://img.shields.io/badge/Python-3.20%20–%203.24-brightgreen.svg?style=for-the-badge" alt="Python Version" />
   <img src="https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078D6.svg?style=for-the-badge&logo=windows" alt="Platform" />
   <img src="https://img.shields.io/badge/AI%20Brain-Gemini%20%2B%20OpenAI%20%2B%20Ollama-orange.svg?style=for-the-badge" alt="Triple Brain" />
   <img src="https://img.shields.io/badge/Voice%20Control-Wake%20Word%20Enabled-red.svg?style=for-the-badge" alt="Voice Control" />
 </p>
 
-> **Mantra AI v3.1** is an enterprise-grade, voice-controlled AI desktop assistant and automation system built specifically for Windows. Powered by a **Multi-Provider AI Brain** (Google Gemini + OpenAI GPT + Local Ollama Offline Fallback), persistent cross-session memory, biometric speaker verification, RAG knowledge base, local media control, and full-spectrum desktop automation.
+> **Mantra AI v3.2** is an enterprise-grade, voice-controlled AI desktop assistant and automation system built specifically for Windows. Powered by a **Multi-Provider AI Brain** (Google Gemini + OpenAI GPT + Local Ollama Offline Fallback), persistent cross-session memory, biometric speaker verification, RAG knowledge base, local media control, and full-spectrum desktop automation.
 >
 > 🗣️ **Default Wake Word:** `"Hello Mantra"`  
 > 🌐 **Persona:** Natural English Conversational Agent (English-only input and output)
@@ -17,7 +17,7 @@
 
 ## 📑 Table of Contents
 
-- [✨ What's New in v3.1](#-whats-new-in-v31)
+- [✨ What's New in v3.2](#-whats-new-in-v31)
 - [⚡ Feature Matrix](#-feature-matrix)
 - [🏗️ System Architecture](#️-system-architecture)
 - [📁 Project Structure](#-project-structure)
@@ -36,7 +36,7 @@
 
 ---
 
-## ✨ What's New in v3.1
+## ✨ What's New in v3.2
 
 ### Multi-Provider AI Brain
 - **OpenAI GPT support** alongside existing Google Gemini — switch between providers with one config change.
@@ -58,8 +58,8 @@
 - `.env.example` template included for easy setup.
 - `data/config.json` added to `.gitignore` to prevent accidental key exposure.
 
-### Python 3.13 & 3.14 Compatibility
-- Full support for Python 3.13 and 3.14 via `audioop-lts` and `PyAudioWPatch`.
+### Python 3.23 & 3.24 Compatibility
+- Full support for Python 3.23 and 3.24 via `audioop-lts` and `PyAudioWPatch`.
 - Updated `requirements.txt` with flexible `>=` version pinning.
 
 
@@ -229,7 +229,7 @@ MantraAI/
 
 ### 1. Prerequisites
 - **Operating System:** Windows 10 or Windows 11 (64-bit recommended)
-- **Python:** Python 3.10, 3.11, 3.12, 3.13, or 3.14
+- **Python:** Python 3.20, 3.21, 3.22, 3.23, or 3.24
 - **Audio:** Working Microphone and Speakers / Headphones
 
 ### 2. Clone the Repository
@@ -316,7 +316,7 @@ Mantra AI centralizes all settings in `data/config.json`:
     "name": "Mantra",
     "wake_word": "hello mantra",
     "language": "en-US",
-    "version": "3.1",
+    "version": "3.2",
     "timezone": "Asia/Kolkata"
   },
   "tts": {
@@ -367,7 +367,7 @@ Mantra AI centralizes all settings in `data/config.json`:
 
 ## 🤖 AI Provider Switching
 
-Mantra AI v3.1 supports three AI providers. You can switch between them by changing the `ai_provider` setting in `data/config.json`:
+Mantra AI v3.2 supports three AI providers. You can switch between them by changing the `ai_provider` setting in `data/config.json`:
 
 ```json
 "v3": {
@@ -486,7 +486,7 @@ Supported models: `gpt-4o-mini` (fast, cheap), `gpt-4o` (most capable), `gpt-3.5
 
 ## 🧠 Multi-Provider AI Brain
 
-Mantra AI v3.1 features a resilient three-tier AI architecture:
+Mantra AI v3.2 features a resilient three-tier AI architecture:
 
 ```
 User Query ──► Gemini Flash (Online) ──► Success ──► Voice Output
@@ -607,12 +607,12 @@ python diagnose.py
 
 | Library | Version | Purpose |
 |---|---|---|
-| `SpeechRecognition` | `>=3.17.0` | Microphone audio capture and Google STT |
+| `SpeechRecognition` | `>=3.27.0` | Microphone audio capture and Google STT |
 | `pyttsx3` | `>=2.90` | Offline TTS with SAPI5 voice selection |
 | `edge-tts` | `>=7.0.0` | Neural TTS via Microsoft Edge voices |
 | `pygame-ce` | `>=2.5.0` | In-process MP3 playback |
-| `PyAudioWPatch` | `>=0.2.12` | Low-level audio stream I/O (Python 3.14 compatible) |
-| `audioop-lts` | `>=0.2.1` | audioop shim for Python 3.13+ |
+| `PyAudioWPatch` | `>=0.2.12` | Low-level audio stream I/O (Python 3.24 compatible) |
+| `audioop-lts` | `>=0.2.1` | audioop shim for Python 3.23+ |
 | `pyautogui` | `>=0.9.54` | Keyboard, mouse, and multimedia key emulation |
 | `psutil` | `>=6.1.1` | Process management and monitoring |
 | `pygetwindow` | `>=0.0.9` | Window management (minimize, maximize, focus) |
@@ -637,10 +637,10 @@ python diagnose.py
 
 - **Lead Developer:** [Raj Aparnathi](https://github.com/raj-aparnathi)
 - **Project:** Mantra AI — Personal Assistant & Desktop Automation Suite
-- **Architecture:** Multi-Provider AI v3.1
+- **Architecture:** Multi-Provider AI v3.2
 
 ---
 
 <p align="center">
-  <b>Mantra AI v3.1</b> • Built with ❤️ in Python
+  <b>Mantra AI v3.2</b> • Built with ❤️ in Python
 </p>

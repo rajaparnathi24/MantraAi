@@ -1,5 +1,5 @@
 """
-brain/openai_llm.py – Mantra AI v3.1
+brain/openai_llm.py – Mantra AI v3.2
 ──────────────────────────────────────
 Communicates with the OpenAI API (ChatGPT models).
 

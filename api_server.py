@@ -1,5 +1,5 @@
 """
-api_server.py – Mantra AI v3.1 Web API
+api_server.py – Mantra AI v3.2 Web API
 ───────────────────────────────────────
 FastAPI server that exposes MantraAI's capabilities as REST endpoints
 for the Next.js frontend dashboard.
@@ -39,7 +39,7 @@ from screen import Screen
 app = FastAPI(
     title="MantraAI API",
     description="REST API for MantraAI desktop control",
-    version="3.1",
+    version="3.2",
 )
 
 # CORS – allow the Next.js frontend
@@ -326,14 +326,14 @@ async def stop_recording():
 
 @app.get("/api/health")
 async def health():
-    return {"status": "ok", "service": "MantraAI API", "version": "3.1"}
+    return {"status": "ok", "service": "MantraAI API", "version": "3.2"}
 
 
 # ── Run ───────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
     print("=" * 60)
-    print("  MantraAI API Server v3.1")
+    print("  MantraAI API Server v3.2")
     print("  http://localhost:8000")
     print("  Docs: http://localhost:8000/docs")
     print("=" * 60)

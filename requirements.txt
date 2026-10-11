@@ -1,16 +1,16 @@
 # ============================================================
-# Mantra AI v3.1 – Requirements  (Python 3.10 – 3.14)
+# Mantra AI v3.2 – Requirements  (Python 3.20 – 3.24)
 # Install: pip install -r requirements.txt
 #
 # NOTE: PyAudioWPatch replaces PyAudio on Windows.
 # ============================================================
 
-# ── Python 3.13+ compatibility ──────────────────────────────
-# audioop was removed from stdlib in 3.13; this shim restores it.
+# ── Python 3.23+ compatibility ──────────────────────────────
+# audioop was removed from stdlib in 3.23; this shim restores it.
 audioop-lts>=0.2.1
 
 # ── Voice ────────────────────────────────────────────────────
-SpeechRecognition>=3.17.0
+SpeechRecognition>=3.27.0
 pyttsx3>=2.90
 
 # ── Neural TTS (human-sounding voice) ───────────────────────
@@ -20,7 +20,7 @@ edge-tts>=7.0.0
 pygame-ce>=2.5.0
 
 # ── Audio I/O ────────────────────────────────────────────────
-# PyAudioWPatch is a maintained fork of PyAudio with Python 3.14 support.
+# PyAudioWPatch is a maintained fork of PyAudio with Python 3.24 support.
 # It provides the same 'pyaudio' module — no code changes needed.
 PyAudioWPatch>=0.2.12
 
@@ -68,10 +68,10 @@ sentence-transformers>=2.0.0
 pypdf>=4.0.0
 python-docx>=1.0.0
 
-# ── Utilities (all built-in to Python 3.10+) ─────────────────
+# ── Utilities (all built-in to Python 3.20+) ─────────────────
 # os, subprocess, datetime, json, threading, pathlib, shutil,
 # logging, socket, time, re, ctypes, signal, zipfile, zoneinfo
-# NOTE: audioop was removed in 3.13 — we use audioop-lts above.
+# NOTE: audioop was removed in 3.23 — we use audioop-lts above.
 
 # ── Optional: Local LLM via Ollama ───────────────────────────
 # Install Ollama from https://ollama.com/download
